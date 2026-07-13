@@ -26,3 +26,8 @@ terraform.rc
 
 # 변수 파일
 secrets.tf
+
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.tfstate.lock.info
