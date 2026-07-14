@@ -259,13 +259,13 @@ done
 echo "MySQL이 준비됨. 초기화 스크립트 실행 중..."
 
 docker exec mysql_1 mysql -uroot -p${var.password_1} -e "
-CREATE USER 'lldjlocal'@'127.0.0.1' IDENTIFIED WITH caching_sha2_password BY '1234';
-CREATE USER 'lldjlocal'@'172.18.%.%' IDENTIFIED WITH caching_sha2_password BY '1234';
-CREATE USER 'lldj'@'%' IDENTIFIED WITH caching_sha2_password BY '${var.password_1}';
+CREATE USER 'predevholocal'@'127.0.0.1' IDENTIFIED WITH caching_sha2_password BY '1234';
+CREATE USER 'predevholocal'@'172.18.%.%' IDENTIFIED WITH caching_sha2_password BY '1234';
+CREATE USER 'predevho'@'%' IDENTIFIED WITH caching_sha2_password BY '${var.password_1}';
 
-GRANT ALL PRIVILEGES ON *.* TO 'lldjlocal'@'127.0.0.1';
-GRANT ALL PRIVILEGES ON *.* TO 'lldjlocal'@'172.18.%.%';
-GRANT ALL PRIVILEGES ON *.* TO 'lldj'@'%';
+GRANT ALL PRIVILEGES ON *.* TO 'predevholocal'@'127.0.0.1';
+GRANT ALL PRIVILEGES ON *.* TO 'predevholocal'@'172.18.%.%';
+GRANT ALL PRIVILEGES ON *.* TO 'predevho'@'%';
 
 CREATE DATABASE \`${var.app_1_db_name}\`;
 
